@@ -1,0 +1,52 @@
+body {
+    background-image: url('../images/backgrounds/purplebg2.jpg');
+    /*comme le fichier css se trouve 
+    dans le dossier static/css , je vais utiliser .. pour remonter vers static et ensuite ver images*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.formulaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black; 
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image_login {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ed9cdc, #7c2a8c);
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+}
+.image_login img {
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
