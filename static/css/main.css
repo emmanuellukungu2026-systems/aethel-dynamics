@@ -9,12 +9,17 @@ body{
     background-position: center center;
     font-family: verdana, sans-serif;
 }
+.logo_aethel {
+    width: 100px;
+    filter:invert()
+}
 .welcome_text {
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    max-height: 100vh;
+    height: auto; 
     font-size: 50px;
     margin-top: 0;
     font-weight: bold;
