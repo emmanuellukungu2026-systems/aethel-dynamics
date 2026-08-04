@@ -8,11 +8,39 @@
     <title>Aethel Dynamics</title>
 </head>
 <body>
+    <div class="top_back">
+        <a href="{{ url_for('page_home') }}" class="btn btn-link p-0" aria-label="Back to home">
+            <svg fill="#a68308" height="20px" width="20px" viewBox="0 0 512.016 512.016" xmlns="http://www.w3.org/2000/svg" stroke="#a68308" aria-hidden="true">
+                <path d="M271.094,368.925L158.176,256.007L271.093,143.09c6.101-6.101,7.936-15.275,4.629-23.253c-3.307-7.979-11.093-13.163-19.712-13.163H147.872c-5.717,0-11.179,2.283-15.168,6.336l-126.528,128c-8.235,8.32-8.235,21.675,0,29.995l126.528,128c3.989,4.053,9.451,6.336,15.168,6.336h108.139c8.619,0,16.405-5.184,19.712-13.163c3.307-7.979,1.472-17.152-4.629-23.253z"></path>
+            </svg>
+        </a>
+    </div>
+
     <div class="top_form">
-        <h1>Welcome to Aethel Dynamics</h1>
+        <img style="filter: invert(1); margin-right: 20px;" class="logo_aethel" width="70" src="{{ url_for('static', filename='logos/aethel_logo_nobg.png') }}" alt="Background Image" class="logo-image">
+        <h1>Welcome to Aethel <span class="orangina">Dynamics</span></h1>
     </div>
     <div class="form_container">
-        
+        <form action="">
+            <div class="input-box">
+              <label for="username">Username</label> 
+              <input type="text" id="username" placeholder="Enter your username">
+            </div>
+    
+
+            <div class="input-box">
+              <label for="password">Password</label> 
+              <input type="password" id="password" placeholder="Enter your password"> 
+            </div>
+            <div class="acceptance">
+              <input type="checkbox" id="acceptance">
+              <label style="margin-bottom: 20px;" for="acceptance">Remember me</label>
+            <input class="button_submit" type="submit" value="Sign Up">
+            </div>            
+            <button type="submit">Login</button>
+
+
+        </form> 
     </div>
 </body>
 </html>
