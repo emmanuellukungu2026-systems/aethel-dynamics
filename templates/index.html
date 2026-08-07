@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    
     <title>Aethel Dynamics</title>
 </head>
 <!-- je vais commencer par faire le design de la page principale-->
 <body>
     <img class="logo_aethel" width="70" src="{{ url_for('static', filename='logos/aethel_logo_nobg.png') }}" alt="Background Image" class="logo-image">
     <div class="welcome_text">
-            <p> Welcome to Aethel  <span class="orangina">Dynamics</span></p>
+            <p> Welcome to Aethel <span class="orangina">Dynamics</span></p>
             <p class="message_description">We are a company that specializes in the development of innovative solutions for businesses and individuals. Our team of experts is dedicated to providing high-quality services and products that meet the needs of our clients.</p>
       <div class="logins_buttons">
         <a class="signin-btn" href="{{ url_for('signin_page') }}"><button>Register</button></a>
         <a class="login-btn" href="{{ url_for('login_page') }}"><button>Login</button></a>
       </div>
     </div>
-    
+    <footer>
+        <p>&copy; 2026 Aethel Dynamics. All rights reserved.</p>
+    </footer>
 </body>
 </html>

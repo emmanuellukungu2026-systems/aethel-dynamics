@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Aethel Dynamics main page.</title>
+</head>
+<body>
+    <div class="top_bar"> 
+        <div class="bar_left">
+            <img width="50px" class="profile_picture" src="{{ url_for('static', filename='images/manu.jpeg') }}" alt="Aethel Logo">
+            
+            <p class="hello_text">Hello.</p><br>
+            <p class="username_text">Emmanuel</p>
+        </div>
+        <div class="bar_right">
+            <img class="ring" width="50px" src="{{ url_for('static', filename='images/svgs/svg_ring.svg') }}" alt="">
+        </div>
+    </div>
+    <br>
+    <!-- je vais ensuite passer à la bar de recherhe et aux autres  -->
+     <div class="research">
+        <div class="search">
+                    <input type="search" name="emmanuel" placeholder="search any businesses , pages or collaborators ... " id="searching_bar" >
+                    <svg class="ring_svg" width="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 10.5A3.502 3.502 0 0 0 18.355 8H21a1 1 0 1 0 0-2h-2.645a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h8.645A3.502 3.502 0 0 0 15 10.5zM3 16a1 1 0 1 0 0 2h2.145a3.502 3.502 0 0 0 6.71 0H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3z" fill="#000000"></path></g></svg>
+        </div>
+     </div>
+     <!-- je vais passer à la liste des svg, je veux parler des menus.  -->
+      <ul class="menu_list">
+        <li class="section one"><svg width="30px" height="30px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z" fill="#000000"></path> </g></svg></li>
+        <li class="section"><svg width="30px" height="30px" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M48.91 526.083h-39.047v458.365h1001.585v-458.365h-39.047zM691.728 206.87c-7.731-93.19-85.909-166.721-181.074-166.721s-173.344 73.53-181.074 166.721h-319.721v277.138h1001.585v-277.138h-319.721zM368.69 206.87c7.575-71.657 68.337-127.674 141.966-127.674s134.389 56.016 141.966 127.674h-283.929z"></path></g></svg></li>
+        <li class="section"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8293 10.7154L20.3116 12.6473C19.7074 14.9024 19.4052 16.0299 18.7203 16.7612C18.1795 17.3386 17.4796 17.7427 16.7092 17.9223C16.6129 17.9448 16.5152 17.9621 16.415 17.9744C15.4999 18.0873 14.3834 17.7881 12.3508 17.2435C10.0957 16.6392 8.96815 16.3371 8.23687 15.6522C7.65945 15.1114 7.25537 14.4115 7.07573 13.641C6.84821 12.6652 7.15033 11.5377 7.75458 9.28263L8.27222 7.35077C8.3591 7.02654 8.43979 6.7254 8.51621 6.44561C8.97128 4.77957 9.27709 3.86298 9.86351 3.23687C10.4043 2.65945 11.1042 2.25537 11.8747 2.07573C12.8504 1.84821 13.978 2.15033 16.2331 2.75458C18.4881 3.35883 19.6157 3.66095 20.347 4.34587C20.9244 4.88668 21.3285 5.58657 21.5081 6.35703C21.7356 7.3328 21.4335 8.46034 20.8293 10.7154ZM11.0524 9.80589C11.1596 9.40579 11.5709 9.16835 11.971 9.27556L16.8006 10.5697C17.2007 10.6769 17.4381 11.0881 17.3309 11.4882C17.2237 11.8883 16.8125 12.1257 16.4124 12.0185L11.5827 10.7244C11.1826 10.6172 10.9452 10.206 11.0524 9.80589ZM10.2756 12.7033C10.3828 12.3032 10.794 12.0658 11.1941 12.173L14.0919 12.9495C14.492 13.0567 14.7294 13.4679 14.6222 13.868C14.515 14.2681 14.1038 14.5056 13.7037 14.3984L10.8059 13.6219C10.4058 13.5147 10.1683 13.1034 10.2756 12.7033Z" fill="#1C274C"></path> <path opacity="0.5" d="M16.4149 17.9745C16.2064 18.6128 15.8398 19.1903 15.347 19.6519C14.6157 20.3368 13.4881 20.6389 11.2331 21.2432C8.97798 21.8474 7.85044 22.1496 6.87466 21.922C6.10421 21.7424 5.40432 21.3383 4.86351 20.7609C4.17859 20.0296 3.87647 18.9021 3.27222 16.647L2.75458 14.7152C2.15033 12.4601 1.84821 11.3325 2.07573 10.3568C2.25537 9.5863 2.65945 8.88641 3.23687 8.3456C3.96815 7.66068 5.09569 7.35856 7.35077 6.75431C7.7774 6.64 8.16369 6.53649 8.51621 6.44534C8.51618 6.44545 8.51624 6.44524 8.51621 6.44534C8.43979 6.72513 8.3591 7.02657 8.27222 7.35081L7.75458 9.28266C7.15033 11.5377 6.84821 12.6653 7.07573 13.6411C7.25537 14.4115 7.65945 15.1114 8.23687 15.6522C8.96815 16.3371 10.0957 16.6393 12.3508 17.2435C14.3833 17.7881 15.4999 18.0873 16.4149 17.9745Z" fill="#1C274C"></path> </g></svg></li>
+        <li class="section"><svg width="30px" height="30px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g fill="none" fill-rule="evenodd" id="页面-1" stroke="none" stroke-width="1"> <g id="导航图标" stroke="#212121" stroke-width="1.5" transform="translate(-175.000000, -142.000000)"> <g id="人脉" transform="translate(175.000000, 142.000000)"> <g id="编组" transform="translate(4.000000, 3.000000)"> <path d="M14.5,6 C13.1193,6 12,4.8807 12,3.5 C12,2.11929 13.1193,1 14.5,1 C15.8807,1 17,2.11929 17,3.5 C17,4.8807 15.8807,6 14.5,6 Z" id="路径"></path> <path d="M2,4 C0.89543,4 0,3.10455 0,2 C0,0.89543 0.89543,0 2,0 C3.10455,0 4,0.89543 4,2 C4,3.10455 3.10455,4 2,4 Z" id="路径"></path> <path d="M9,17.5 L12,15 L12,12 C12,10.26695 13,9 14.5,9 C16,9 17,10.26695 17,12 L17,14.4186 L17,19" id="路径" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8,14.5 L5,12 L5,10 C5,8.26695 4,7 2.5,7 C1,7 0,8.26695 0,10 L0,11.4186 L0,19" id="路径" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g> </g> </g> </g></svg></li>
+        <li class="section"><svg width="30px" height="30px" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="dashboard-alt-2" class="icon glyph"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12,3A10,10,0,0,0,2,13a9.89,9.89,0,0,0,3.74,7.78,1,1,0,0,0,.62.22H17.64a1,1,0,0,0,.62-.22A9.89,9.89,0,0,0,22,13,10,10,0,0,0,12,3Zm4.83,6.55-3,4.56A1.91,1.91,0,0,1,14,15a2,2,0,1,1-2-2h.13l3-4.56a1,1,0,0,1,1.66,1.1Z"></path></g></svg></li>
+      </ul>
+
+      <div class="business_infos">
+        <div class="business_banner">
+        <h4>start you own business with aethel</h4>
+        <p>It is may be the only opportunity that you have to do so </p>
+        <button class="start_business">Start</button>
+      </div>
+      <div class="description">
+        <h4>About Aethel</h4>
+        <p>
+            <b>AETHEL DYNAMICS</b> is a modern business management platform designed to help organizations simplify their daily operations through: p powerful, intelligent, and scalable digital solutions. From customer relationship management and inventory tracking to sales, invoicing, financial analytics, employee management, and business reporting, AETHEL DYNAMICS brings every essential tool together in one secure platform. Built with a modular architecture, it adapts to businesses of all sizes, allowing each organization to activate only the features it needs. Our mission is to empower entrepreneurs and companies with innovative technology that increases productivity, supports smarter decision-making, and drives sustainable growth in an increasingly digital world.
+        
+        </p>
+      </div>
+
+
+      </div>
+      
+
+      <div class="carrousel">
+        
+      </div>
+<footer>
+        <p>&copy; 2026 Aethel Dynamics. All rights reserved.</p>
+</footer>
+</body>
+</html>

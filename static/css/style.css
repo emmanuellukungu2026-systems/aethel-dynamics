@@ -1,0 +1,181 @@
+body{
+    padding: 0px 20px 0px;
+}
+
+.top_bar{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center; justify-content: space-between; flex-direction: row;
+    padding: 2px; 
+    
+}
+.bar_left{
+    display: flex;
+    align-items: center; justify-content: space-between; flex-direction: row;
+}
+.top_bar .profile_picture{
+    border-radius: 50%;
+}
+.ring {
+    background-color: whitesmoke;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    padding: 10px;
+}
+.hello_text, .username_text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 20px;
+}
+.username_text{
+    display: none; 
+}
+.search {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+#searching_bar{ 
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    border-radius: 19px;
+    border: none;
+    background-color: whitesmoke; 
+    margin-right: 5px;
+    padding-left: 19px;
+}
+.search svg{
+    filter: invert(1); 
+    background-color: rgb(174, 228, 11);
+}
+.ring_svg{
+width: 25px; 
+height: 25px; 
+border-radius: 50%;
+background-color: rgb(6, 6, 122);
+padding: 5px; 
+}
+/* je viens de rentrer dans le menu de section  */
+.menu_list li {
+    list-style-type: none;
+    display: flex; 
+    margin: 0; 
+    padding: 0; 
+    align-items: center;
+    justify-content: center;
+}
+.menu_list {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    
+}
+.section {
+    width: 100%; 
+    height: 50px; 
+    border-radius: 5%;
+    background-color: whitesmoke;
+}
+/* le menu déjà selected */
+.one {
+    background: rgb(8, 3, 113);
+}
+.one svg{
+    filter: invert(1);
+}
+
+
+
+.business_banner{
+    border-radius: 16px;
+    padding: 20px; 
+    color: black;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100% auto;
+    height: auto;
+    background: url('/static/images/backgrounds/blue.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.business_banner h4{
+    color: midnightblue; 
+    width: 80%;
+    font-size: 19px;
+    margin: 0; 
+    padding: 0; 
+}
+.business_banner p{
+    font-size: 8px;
+    width: 50%;
+}
+.business_banner button{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    background-color: midnightblues;
+    width: 40%;
+    height: 30px;
+    border: none; 
+    border-radius: 16px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.description{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align:justify;
+}
+
+.business_banner{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    height: 150px;
+}
+@media screen     {
+    @media (min-width: 900px){
+    .business_infos{
+        display: flex;
+        gap: 10px; 
+        justify-content: center;
+        align-items: center;
+    }
+    .business_banner{
+        width: 50%; 
+        height: 300px;
+
+    }
+    .description{
+        width: 50%; 
+        padding: 12px;
+    }
+}
+
+}
+
+
+
+
+
+
+footer{
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: white; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    margin: 0; 
+    left: 0; 
+}

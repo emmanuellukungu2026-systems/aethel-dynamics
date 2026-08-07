@@ -11,6 +11,9 @@ def signin_page():
 @app.route('/login')
 def login_page():
     return render_template('login.html')
+@app.route('/main')
+def main_page():
+    return render_template('main_page.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
