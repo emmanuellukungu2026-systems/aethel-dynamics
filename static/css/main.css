@@ -19,6 +19,8 @@ body{
     flex-direction: column;
     align-items: center;
     max-height: 100vh;
+    color: white; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: auto; 
     font-size: 50px;
     margin-top: 0;
@@ -56,4 +58,19 @@ button{
     border: none;
     color: white; 
     font-weight: bold;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #67a9ef;
+    color: black; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    margin: 0; 
+    left: 0; 
 }
