@@ -11,7 +11,7 @@ body {
 
 
 .top_form {
-    background-image: url('../images/backgrounds/beautifulpc.jpg');
+    background-image: url('../images/backgrounds/angel-wings.png');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,6 +28,11 @@ body {
     padding: 20px;
     text-align: center;
 
+}
+@media (min-width: 900px){
+    .top_form{
+        height: 50%;
+    }
 }
 button{
     background-color: transparent; 

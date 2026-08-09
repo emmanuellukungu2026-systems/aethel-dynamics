@@ -16,6 +16,10 @@ body{
 }
 .top_bar .profile_picture{
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 .ring {
     background-color: whitesmoke;
@@ -36,6 +40,8 @@ body{
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    position: sticky; 
+    top: 0; 
 }
 #searching_bar{ 
     width: 80%;
@@ -57,6 +63,16 @@ height: 25px;
 border-radius: 50%;
 background-color: rgb(6, 6, 122);
 padding: 5px; 
+}
+
+.top_main{
+    position: sticky;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 20px;
 }
 /* je viens de rentrer dans le menu de section  */
 .menu_list li {
@@ -118,7 +134,7 @@ padding: 5px;
     justify-content: center;
     align-items: center;
     align-items: center;
-    background-color: midnightblues;
+    background-color: white;
     width: 40%;
     height: 30px;
     border: none; 
@@ -140,7 +156,7 @@ padding: 5px;
     flex-direction: column;
     height: 150px;
 }
-@media screen     {
+
     @media (min-width: 900px){
     .business_infos{
         display: flex;
@@ -159,7 +175,7 @@ padding: 5px;
     }
 }
 
-}
+
 
 
 
