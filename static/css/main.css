@@ -1,57 +1,136 @@
 body{
     min-height: 100vh;
-    color: white;
     text-align: center;
-    background-color: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45)), url('../images/backgrounds/beautifulpc.jpg');
+    background-color: whitesmoke;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     font-family: verdana, sans-serif;
 }
-.logo_aethel {
-    width: 100px;
-    filter:invert()
+.caption{
+    display: inline;
+    padding: 2px 9px;
+    font-family: monospace;
+    border-radius: 10px;
+    background-color:#d3e4f7;
+    color: rgb(141, 141, 245);
 }
+.logo_aethel {
+    width: 80px;
+}
+.phone_aethel{
+
+    width: 160px;
+}
+
+.top_home{
+    background-color: rgb(253, 250, 250);
+    height: 30vh;
+}
+nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logins_buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .welcome_text {
     display: flex;
     justify-content:center;
     flex-direction: column;
     align-items: center;
     max-height: 100vh;
-    color: white; 
+    color: black; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: auto; 
-    font-size: 50px;
+    font-size: 20px;
     margin-top: 0;
-    font-weight: bold;
 }
+.welcome_band{
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.band_left{
+    width:60%; 
+    text-align: left;
+}
+.band_right{
+    width: 40%;
+    background: radial-gradient(circle, blue, white,white);
+}
+.sec_buttons{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    flex-direction: column;
+}
+.button1{
+    margin-bottom: 12px;
+}
+.sec_buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #061a9a;
+    min-width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: white; 
+    display: flex;
+    padding: 7px;
+    text-align: center;
+    border: none;
+}
+.sec_buttons .button1 svg {
+    margin-left: 5px;
+    filter: invert(1);
+}
+.button2 button{
+    background-color: white;
+    border:1px solid #061a9a; 
+    color: midnightblue;
+    border-radius: 5px;
+
+}
+.sec_buttons .button2 svg{
+    margin-left: 8px;
+
+}
+
 .message_description {
     font-size: small;
     margin-top: 20px;
     color: #ccc;
 }
 .orangina { 
-    color: orange; 
-    display: inline-block; 
+    color: #061a9a; 
+    display: inline-block;
 }
 .login-btn, .signin-btn {
-    width: 200px;
-    display: inline-block;
-    padding: 10px 20px;
+    width: auto;
+    padding: 7px;
     margin: 10px;
-    font-size: 16px;
     color: white;
-    background-color: #67a9ef;
+    background-color: #061a9a;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 8px;
+    text-align: center;
+
 }
 .signin-btn {
-    background-color: #f39c12;
+    background-color: #020100;
 }
 button{
     background: none; 
