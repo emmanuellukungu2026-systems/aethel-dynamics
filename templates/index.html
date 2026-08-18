@@ -1,62 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-    
+
     <title>Aethel Dynamics</title>
 </head>
-<!-- je vais commencer par faire le design de la page principale-->
+
+<!-- je vais commencer par faire le design de la page principale -->
+
 <body>
-    <nav> 
-        <img class="logo_aethel" width="70" src="{{ url_for('static', filename='logos/aethel_logo_nobg.png') }}" alt="Background Image" class="logo-image">
+
+    <nav>
+        <img
+            class="logo_aethel"
+            width="70"
+            src="{{ url_for('static', filename='logos/aethel_logo_nobg.png') }}"
+            alt="Background Image"
+        >
+
         <div class="logins_buttons">
-        <a class="signin-btn" href="{{ url_for('signin_page') }}"><button>Register</button></a>
-        <a class="login-btn" href="{{ url_for('login_page') }}"><button>Login</button></a>
-      </div>
+            <a class="signin-btn" href="{{ url_for('signin_page') }}">
+                <button>Register</button>
+            </a>
+
+            <a class="login-btn" href="{{ url_for('login_page') }}">
+                <button>Login</button>
+            </a>
+        </div>
     </nav>
+
+
     <div class="top_home">
-    
-    <div class="welcome_text">
+
+        <div class="welcome_text">
+
             <div class="welcome_band">
+
                 <div class="band_left">
-                    <p class="caption">built for small businesses</p>
-                                <h2> Manage your Businesses in some clicks with <span class="orangina">Flow</span></h2>
 
-                    <p>Flow is a simple business management platform built for small businesses.
+                    <p class="caption">
+                        FOR THE NEXT GENERATION OF ENTREPRENEURS                    </p>
 
-Manage your customers, finances, tasks, and daily operations — all in one place.</p>
-<div class="sec_buttons">
-                <div class="button1">
-                    <button> Get started for free .<svg width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H6.5M20 12L14 6M20 12L14 18M20 12H9.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+                    <h2>
+                        Turn your idea into a business with
+                        <span class="orangina">Flow</span>
+                    </h2>
+
+                    <p>
+                        Start building your business with everything you need in one place.
+Create a professional identity that represents who you are.
+Connect with customers, manage orders and keep your finances organized.
+Build your reputation through experience, reviews and achievements.
+
+                    </p>
+
+                    <div class="sec_buttons">
+
+                        <div class="button1">
+                            <button>
+                                Get started.
+                                <svg
+                                    width="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g
+                                        id="SVGRepo_tracerCarrier"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M4 12H6.5M20 12L14 6M20 12L14 18M20 12H9.5"
+                                            stroke="#1C274C"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+
+                        <div class="button2">
+                            <button>
+                                Explore Flow
+
+                                <svg
+                                    width="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g
+                                        id="SVGRepo_tracerCarrier"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.6935 15.8458L15.4137 13.059C16.1954 12.5974 16.1954 11.4026 15.4137 10.941L10.6935 8.15419C9.93371 7.70561 9 8.28947 9 9.21316V14.7868C9 15.7105 9.93371 16.2944 10.6935 15.8458Z"
+                                            fill="#1C274C"
+                                        ></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="button2">
-                    <button>How to use flow <svg width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.6935 15.8458L15.4137 13.059C16.1954 12.5974 16.1954 11.4026 15.4137 10.941L10.6935 8.15419C9.93371 7.70561 9 8.28947 9 9.21316V14.7868C9 15.7105 9.93371 16.2944 10.6935 15.8458Z" fill="#1C274C"></path> </g></svg></button>
-                </div>
-            </div>
-                </div>
+
+
                 <div class="band_right">
-                        <img class="phone_aethel" src="{{ url_for('static', filename='images/phone.png') }}" alt="Background Image" class="logo-image">
+
+                    <img
+                        class="phone_aethel"
+                        src="{{ url_for('static', filename='images/phone.png') }}"
+                        alt="Background Image"
+                    >
+
                 </div>
-                
+
             </div>
 
-            
+        </div>
+
     </div>
+
+
+    <div class="options">
+
+        <div class="sol red">
+            <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#110660"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M512 64C264.96 64 64 264.96 64 512s200.96 448 448 448 448-200.96 448-448-200.96-448-448-448z m0 831.744A384.128 384.128 0 0 1 128.256 512 384.128 384.128 0 0 1 512 128.256 384.128 384.128 0 0 1 895.744 512 384.192 384.192 0 0 1 512 895.744zM512 254.08a140.16 140.16 0 0 0-140.672 139.392 32.128 32.128 0 0 0 64.32 0c0-42.112 33.536-75.136 76.352-75.136 42.112 0 76.352 34.56 76.352 76.992 0 16-22.912 38.976-43.2 59.2-30.592 30.592-65.28 65.28-65.28 111.744v45.888a32.128 32.128 0 1 0 64.256 0v-45.888c0-19.84 23.68-43.52 46.464-66.304 29.056-29.056 62.08-62.016 62.08-104.64A141.12 141.12 0 0 0 512 254.08z m-48.192 500.928a48.192 48.192 0 1 0 96.384 0 48.192 48.192 0 0 0-96.384 0z" fill="#000000"></path></g></svg>
+            <h5>The problem</h5>
+            <p>Your business is everywhere.
+
+                Your customers are on one platform.
+                Your finances are somewhere else.
+                Your orders, documents and business information are scattered across different apps.
+                
+                Small businesses shouldn't need a dozen tools to stay organized.</p>
+        </div>
+        <div class="sol blue">
+            <svg fill="#000000" viewBox="-4 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M10.328 6.83a5.903 5.903 0 0 1-1.439 3.64 2.874 2.874 0 0 0-.584 1v1.037a.95.95 0 0 1-.95.95h-3.71a.95.95 0 0 1-.95-.95V11.47a2.876 2.876 0 0 0-.584-1A5.903 5.903 0 0 1 .67 6.83a4.83 4.83 0 0 1 9.28-1.878 4.796 4.796 0 0 1 .38 1.88zm-.95 0a3.878 3.878 0 0 0-7.756 0c0 2.363 2.023 3.409 2.023 4.64v1.037h3.71V11.47c0-1.231 2.023-2.277 2.023-4.64zM7.83 14.572a.475.475 0 0 1-.475.476h-3.71a.475.475 0 0 1 0-.95h3.71a.475.475 0 0 1 .475.474zm-.64 1.262a.238.238 0 0 1-.078.265 2.669 2.669 0 0 1-3.274 0 .237.237 0 0 1 .145-.425h2.983a.238.238 0 0 1 .225.16z"></path></g></svg>
+            <h5>The solution</h5>
+            <p>Bring everything into one system.
+
+                Flow brings your business profile, customers, orders, finances, documents and insights together in one simple platform.
+                
+                One account. One place. One flow.</p>
+
+
+        </div>
+        <div class="sol green">
+            <svg fill="#000000" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="a"></g> <g id="b"> <path d="M53.2676,21.2861c-1.0825-.6357-2.3833-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v26.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5V24.3076c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,32.2139c0,.2759-.2241,.5-.5,.5h-9c-.2759,0-.5-.2241-.5-.5V27.355c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v29.1924Zm-17.7324-22.2139c-1.083-.6357-2.3828-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v16.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5v-19.1924c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,22.2139c0,.2759-.2241,.5-.5,.5h-9c-.2759,0-.5-.2241-.5-.5v-16.145c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v19.1924Zm-17.7324-13.2139c-1.0835-.6357-2.3833-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v7.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5v-10.1924c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,13.2139c0,.2759-.2241,.5-.5,.5H10.5c-.2759,0-.5-.2241-.5-.5v-7.145c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v10.1924ZM43.6836,20.1655c.3647-3.4077,.4043-6.7339,.1177-9.8862-.0664-.7373-.6958-1.2827-1.4419-1.272-3.7036,.1211-7.1143,.7529-10.1372,1.8789-.5161,.1924-.8765,.6313-.9644,1.1743-.0869,.54,.1152,1.0674,.542,1.4097l1.6562,1.3315c-.9927,1.4741-5.3232,7.1528-14.8311,10.1787-1.1265,.3579-2.333,.6167-3.4995,.8667-3.2983,.7065-6.4131,1.3745-6.0996,4.1621,.0684,.6157,.4351,1.4844,1.7964,2.125,1.188,.5591,2.9023,.8423,4.8721,.8423,4.1152,0,9.3442-1.2358,13.21-3.7739,6.1064-4.0073,9.9341-7.9927,11.0273-9.1943l1.4014,1.1226c.4146,.3335,.9805,.4111,1.4722,.2065,.4937-.2056,.8223-.6436,.8784-1.1719Zm-.9941-.1064c-.0244,.23-.1958,.3252-.2686,.3555-.1582,.0654-.3306,.042-.4629-.064l-1.772-1.4199c-.2114-.1699-.5195-.1392-.6943,.0674-.0391,.0464-3.9951,4.6826-11.1362,9.3687-5.3623,3.5215-13.7422,4.4468-17.1074,2.8628-.7568-.356-1.1699-.8037-1.228-1.3315-.2026-1.7969,1.8877-2.3384,5.3149-3.0732,1.1899-.2549,2.4204-.5186,3.5933-.8911,11.3286-3.6055,15.4551-10.6943,15.6255-10.9946,.1206-.2134,.0693-.4829-.1221-.6362l-2.0059-1.6118c-.2051-.165-.1943-.3843-.1807-.4707,.0142-.0884,.0747-.3032,.3257-.3965,2.9219-1.0884,6.2261-1.6997,9.8208-1.8174h.0122c.2046,0,.3833,.1602,.4014,.3628v.0005c.2808,3.0869,.2422,6.3472-.1157,9.6895Z"></path> </g> </g></svg>
+
+            <h5>The result</h5>
+            <p>More time to build what matters.
+
+                Stay organized, look professional, build customer trust and track your progress as your business grows.
+                
+                You focus on your business. Flow handles the background task.</p>
+
+
+        </div>
+
+    </div>
+    <h3>Everything that you need in one place</h3>
+
+    <div class="fonctions">
+        <div class="sol">
+            <svg fill="#000000" version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 255 256" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M154.3,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7s-7.5-16.7-16.7-16.7S154.3,164.6,154.3,173.8z M144.4,193.6 h-18.8h-18.8c-11.4,0-18.6,9.4-18.6,21.3V256h12.8v-37.7c0-1.2,1-2,2-2c1.2,0,2,0.8,2,2v37.6h41.2v-37.6c0-1.2,1-2,2-2 c1.2,0,2,1,2,2v37.6h12.8V215C163.3,203.1,156,193.6,144.4,193.6z M198.2,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7 s-7.5-16.7-16.7-16.7S198.2,164.6,198.2,173.8z M196.5,193.6c-11.4,0-18.6,9.4-18.6,21.3V256h12.8v-37.7c0-1.2,1-2,2-2 c1.2,0,2,0.8,2,2v37.6h41.2v-37.6c0-1.2,1-2,2-2c1.2,0,2,1,2,2v37.6h12.8V215c0.2-12-7.1-21.5-18.6-21.5h-18.8L196.5,193.6 L196.5,193.6L196.5,193.6z M23.1,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7s-7.5-16.7-16.7-16.7S23.1,164.6,23.1,173.8z M15,255.9v-37.6c0-1.2,1-2,2-2c1.2,0,2,0.8,2,2v37.6h41.2v-37.6c0-1.2,1-2,2-2c1.2,0,2,1,2,2v37.6H77V215 c0.2-12-7.1-21.5-18.6-21.5H39.6H20.8c-11.4,0-18.6,9.4-18.6,21.3v41.1L15,255.9L15,255.9z M108.9,173.8c0,9.2,7.5,16.7,16.7,16.7 s16.7-7.5,16.7-16.7s-7.5-16.7-16.7-16.7S108.9,164.6,108.9,173.8z M67.2,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7 s-7.5-16.7-16.7-16.7S67.2,164.6,67.2,173.8z M167.6,44.2l-3.8,3.8c2.9,5.9,4.5,12.5,4.5,19.5c-0.1,23.1-18.5,42.4-41.5,43.6 c-25.9,1.3-47.3-20.1-46-46C82,42,101.3,23.6,124.4,23.5c7,0,13.6,1.6,19.5,4.5l3.8-3.8v-4.5v-1.4c-7.9-3.7-16.8-5.6-26.2-5.1 c-27.8,1.6-50.1,24.5-51,52.3c-1,31.3,24.7,57,55.9,55.9c27.8-0.9,50.7-23.2,52.3-51c0.5-9.4-1.3-18.3-5.1-26.2h-1.4 C172.2,44.2,167.6,44.2,167.6,44.2z M146.6,65.3l8.6-8.6c1.6,4.7,2.3,9.9,1.5,15.3c-2.1,14.7-14.1,26.3-28.9,27.8 c-20.5,2-37.7-15.2-35.6-35.7c1.5-14.8,13.1-26.8,27.8-28.9c5.4-0.7,10.6-0.1,15.3,1.5l-8.6,8.6c-0.7-0.1-1.4-0.1-2.1-0.1 c-13,0-23.5,11.3-22,24.7c1.1,10.2,9.3,18.3,19.5,19.5c13.3,1.5,24.7-9,24.7-22C146.7,66.6,146.7,66,146.6,65.3z M163.7,34.8 l-28.9,28.9c0.5,1.4,0.7,3,0.5,4.7c-0.5,5.1-4.7,9.2-9.8,9.7c-6.7,0.6-12.3-5-11.8-11.8c0.4-5.1,4.6-9.3,9.7-9.8 c1.7-0.2,3.2,0,4.7,0.5l28.9-28.9v-8.4l18.8-18.8V16H191l-18.8,18.8L163.7,34.8z"></path> </g></svg>
+
+            <h5>Customer mode</h5>
+            <p>Explore small businesses, student entrepreneurs and creators in one place.
+                Discover their story, portfolio, products and services.
+                Connect with them directly, ask questions and place orders with ease.
+                Save the businesses you love and come back whenever you need them.</p>
+        </div>
+        <div class="sol">
+            <svg viewBox="-1.5 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>wallet</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -774.000000)" fill="#000000"> <path d="M285,793 L280,793 C279.448,793 279,793.448 279,794 L279,798 C279,798.553 279.448,799 280,799 L285,799 L285,804 C285,804.553 284.552,805 284,805 L260,805 C259.448,805 259,804.553 259,804 L259,785 L284,785 C284.552,785 285,785.447 285,786 L285,793 L285,793 Z M285,796 L285,797 L281,797 L281,796 L281,795 L285,795 L285,796 L285,796 Z M283,777 L283,783 L263.5,783 L283,777 L283,777 Z M285,783 L285,776 C285,775.447 284.764,775.141 284.25,774.938 C283.854,774.781 283.469,774.875 283,775 L257,783 L257,805 C257,806.104 257.896,807 259,807 L285,807 C286.104,807 287,806.104 287,805 L287,785 C287,783.896 286.104,783 285,783 L285,783 Z" id="wallet" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+
+
+            <h5>Finances</h5>
+            <p>Keep your business finances simple and organized in one place.
+                Track your income, expenses and transactions without complicated spreadsheets.
+                See how your business is performing and understand where your money comes from and where it goes.
+                Stay on top of your numbers as your business grows.</p>
+
+
+        </div>
+        <div class="sol">
+            <svg viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M48.91 526.083h-39.047v458.365h1001.585v-458.365h-39.047zM691.728 206.87c-7.731-93.19-85.909-166.721-181.074-166.721s-173.344 73.53-181.074 166.721h-319.721v277.138h1001.585v-277.138h-319.721zM368.69 206.87c7.575-71.657 68.337-127.674 141.966-127.674s134.389 56.016 141.966 127.674h-283.929z"></path></g></svg>
+            <h5>Business</h5>
+            <p>Track your income, expenses and transactions from one centralized dashboard.
+                Organize your financial activity, monitor your cash flow and keep a clear view of your business performance.
+                Generate detailed financial reports and use your data to understand where your business stands.
+                Keep your records organized and make more informed decisions as your business grows.
+                Simple financial management, built for growing businesses.</p>
+
+
+        </div>
+        <div class="sol">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M22 22H2" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M21 22V14.5C21 13.6716 20.3284 13 19.5 13H16.5C15.6716 13 15 13.6716 15 14.5V22" stroke="#1C274C" stroke-width="1.5"></path> <path d="M15 22V9M9 22V5C9 3.58579 9 2.87868 9.43934 2.43934C9.87868 2 10.5858 2 12 2C13.4142 2 14.1213 2 14.5607 2.43934C15 2.87868 15 3.58579 15 5V5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 22V9.5C9 8.67157 8.32843 8 7.5 8H4.5C3.67157 8 3 8.67157 3 9.5V16M3 22V19.75" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+            <h5>Insight</h5>
+            <p>Get a clear overview of how your business is performing and where it is heading.
+                Track key metrics, identify trends and understand what is driving your growth.
+                Monitor customer activity, orders, revenue and other important business indicators from one place.
+                Use your data to spot opportunities, recognize what needs attention and make smarter decisions.</p>
+        </div>
+        <div class="sol">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.33497 4.72727V5.25342C6.64516 6.35644 4.76592 9.97935 4.83412 13.1192L4.83409 14.8631C3.45713 16.6333 3.53815 19.2727 6.9735 19.2727H9.33497C9.33497 19.996 9.61684 20.6897 10.1186 21.2012C10.6203 21.7127 11.3008 22 12.0104 22C12.72 22 13.4005 21.7127 13.9022 21.2012C14.404 20.6897 14.6858 19.996 14.6858 19.2727H17.0538C20.4826 19.2727 20.5323 16.6278 19.1555 14.8576L19.1938 13.1216C19.2631 9.97811 17.3803 6.35194 14.6858 5.25049V4.72727C14.6858 4.00396 14.404 3.31026 13.9022 2.7988C13.4005 2.28734 12.72 2 12.0104 2C11.3008 2 10.6203 2.28734 10.1186 2.7988C9.61684 3.31026 9.33497 4.00395 9.33497 4.72727ZM12.9022 4.72727C12.9022 4.74573 12.9017 4.76414 12.9006 4.78246C12.6101 4.74603 12.3142 4.72727 12.014 4.72727C11.7113 4.72727 11.413 4.74634 11.1203 4.78335C11.1192 4.76474 11.1186 4.74603 11.1186 4.72727C11.1186 4.48617 11.2126 4.25494 11.3798 4.08445C11.547 3.91396 11.7739 3.81818 12.0104 3.81818C12.2469 3.81818 12.4738 3.91396 12.641 4.08445C12.8083 4.25494 12.9022 4.48617 12.9022 4.72727ZM11.1186 19.2727C11.1186 19.5138 11.2126 19.7451 11.3798 19.9156C11.547 20.086 11.7739 20.1818 12.0104 20.1818C12.2469 20.1818 12.4738 20.086 12.641 19.9156C12.8083 19.7451 12.9022 19.5138 12.9022 19.2727H11.1186ZM17.0538 17.4545C17.8157 17.4545 18.2267 16.5435 17.7309 15.9538C17.49 15.6673 17.3616 15.3028 17.3699 14.9286L17.4106 13.0808C17.4787 9.99416 15.0427 6.54545 12.014 6.54545C8.98598 6.54545 6.55028 9.99301 6.61731 13.0789L6.65748 14.9289C6.66561 15.303 6.53726 15.6674 6.29639 15.9538C5.80054 16.5435 6.21158 17.4545 6.9735 17.4545H17.0538Z" fill="#000000"></path> </g></svg>
+            <h5>Notifications (not available) </h5>
+            <p>Keep up with the activity happening across your business from one place.
+                Get notified about new orders, customer messages, reviews and important business updates.
+                Receive timely reminders and stay aware of what needs your attention.
+                Everything important, delivered when you need it.</p>
+
+
+        </div>
+        <div class="sol">
+            <svg fill="#000000" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="a"></g> <g id="b"> <path d="M53.2676,21.2861c-1.0825-.6357-2.3833-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v26.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5V24.3076c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,32.2139c0,.2759-.2241,.5-.5,.5h-9c-.2759,0-.5-.2241-.5-.5V27.355c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v29.1924Zm-17.7324-22.2139c-1.083-.6357-2.3828-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v16.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5v-19.1924c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,22.2139c0,.2759-.2241,.5-.5,.5h-9c-.2759,0-.5-.2241-.5-.5v-16.145c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v19.1924Zm-17.7324-13.2139c-1.0835-.6357-2.3833-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v7.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5v-10.1924c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,13.2139c0,.2759-.2241,.5-.5,.5H10.5c-.2759,0-.5-.2241-.5-.5v-7.145c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v10.1924ZM43.6836,20.1655c.3647-3.4077,.4043-6.7339,.1177-9.8862-.0664-.7373-.6958-1.2827-1.4419-1.272-3.7036,.1211-7.1143,.7529-10.1372,1.8789-.5161,.1924-.8765,.6313-.9644,1.1743-.0869,.54,.1152,1.0674,.542,1.4097l1.6562,1.3315c-.9927,1.4741-5.3232,7.1528-14.8311,10.1787-1.1265,.3579-2.333,.6167-3.4995,.8667-3.2983,.7065-6.4131,1.3745-6.0996,4.1621,.0684,.6157,.4351,1.4844,1.7964,2.125,1.188,.5591,2.9023,.8423,4.8721,.8423,4.1152,0,9.3442-1.2358,13.21-3.7739,6.1064-4.0073,9.9341-7.9927,11.0273-9.1943l1.4014,1.1226c.4146,.3335,.9805,.4111,1.4722,.2065,.4937-.2056,.8223-.6436,.8784-1.1719Zm-.9941-.1064c-.0244,.23-.1958,.3252-.2686,.3555-.1582,.0654-.3306,.042-.4629-.064l-1.772-1.4199c-.2114-.1699-.5195-.1392-.6943,.0674-.0391,.0464-3.9951,4.6826-11.1362,9.3687-5.3623,3.5215-13.7422,4.4468-17.1074,2.8628-.7568-.356-1.1699-.8037-1.228-1.3315-.2026-1.7969,1.8877-2.3384,5.3149-3.0732,1.1899-.2549,2.4204-.5186,3.5933-.8911,11.3286-3.6055,15.4551-10.6943,15.6255-10.9946,.1206-.2134,.0693-.4829-.1221-.6362l-2.0059-1.6118c-.2051-.165-.1943-.3843-.1807-.4707,.0142-.0884,.0747-.3032,.3257-.3965,2.9219-1.0884,6.2261-1.6997,9.8208-1.8174h.0122c.2046,0,.3833,.1602,.4014,.3628v.0005c.2808,3.0869,.2422,6.3472-.1157,9.6895Z"></path> </g> </g></svg>
+
+            <h5>Dashboards</h5>
+            <p>Get a clear overview of your business from a single, intuitive dashboard.
+                Monitor your orders, customers, revenue and overall performance in real time.
+                Quickly access the tools you use most and stay on top of what needs your attention.
+                Track your progress, review important activity and understand how your business is moving.</p>
+
+
+        </div>
+
+    </div>
+    <h3>how does Flow work ?</h3>
+    <div class="flow_flow">
+        <div class="sol">
+            <span>1</span>
+            <h5>Creating an account</h5>
+            <p>Create your account with your email and set up your personal profile. Choose how you want to use Flow as a Business or a Customer.</p>
+        </div>
+        <svg
+                                    width="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g
+                                        id="SVGRepo_tracerCarrier"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M4 12H6.5M20 12L14 6M20 12L14 18M20 12H9.5"
+                                            stroke="#1C274C"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></path>
+                                    </g>
+                                </svg>
+        <div class="sol">
+            <span>2</span>
+            <h5>Build your flow</h5>
+            <p>Set up your experience.
+
+                If you're a business, create your professional profile, add your services or products, portfolio and business information.
+                If you're a customer, explore businesses and build your personal favorites.</p>
+
+
+        </div>
+        <svg
+                                    width="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g
+                                        id="SVGRepo_tracerCarrier"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M4 12H6.5M20 12L14 6M20 12L14 18M20 12H9.5"
+                                            stroke="#1C274C"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></path>
+                                    </g>
+                                </svg>
+        <div class="sol">
+            <span>3</span>
+
+            <h5>Connect</h5>
+            <p>Start using Flow.
+
+                Businesses can receive orders, manage customers, track finances and monitor their performance. Customers can discover businesses, place orders, communicate and leave reviews.</p>
+
+
+        </div>
     </div>
 
-   
-
-
-
-
-
-
-
-
+    <div class="ready_manage">
+        <h4>Ready to manage your business ? </h4>
+        <p>Join Flow community and take control of your business today</p>
+        <button>Get started for free</button>
+    </div>
     <footer>
-        <p>&copy; 2026 Aethel Dynamics. All rights reserved.</p>
+
+        <p>
+            &copy; 2026 Aethel Dynamics. All rights reserved.
+        </p>
+
     </footer>
+
 </body>
+
 </html>
