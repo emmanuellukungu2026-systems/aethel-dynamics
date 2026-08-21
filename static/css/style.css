@@ -23,21 +23,22 @@ body{
 }
 .ring {
     background-color: whitesmoke;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%; 
     padding: 10px;
 }
 .hello_text, .username_text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
     margin-left: 20px;
+    font-weight: bold ;
 }
-.username_text{
-    display: none; 
-}
+
 .search {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     position: sticky; 
@@ -47,7 +48,7 @@ body{
     width: 80%;
     height: 40px;
     text-align: center;
-    border-radius: 19px;
+    border-radius: 5px;
     border: none;
     background-color: whitesmoke; 
     margin-right: 5px;
@@ -55,13 +56,16 @@ body{
 }
 .search svg{
     filter: invert(1); 
-    background-color: rgb(174, 228, 11);
+    background-color: rgb(130, 166, 24);
 }
+
+
 .ring_svg{
 width: 25px; 
+
 height: 25px; 
-border-radius: 50%;
-background-color: rgb(6, 6, 122);
+border-radius: 5px;
+background-color: rgb(3, 3, 76);
 padding: 5px; 
 }
 
@@ -91,9 +95,9 @@ padding: 5px;
     
 }
 .section {
-    width: 100%; 
+    width: 50px; 
     height: 50px; 
-    border-radius: 5%;
+    border-radius: 50%;
     background-color: whitesmoke;
 }
 /* le menu déjà selected */
@@ -113,7 +117,7 @@ padding: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100% auto;
     height: auto;
-    background: url('/static/images/backgrounds/blue.jpg'); 
+    background: url('/static/images/backgrounds/bgwhite.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,16 +130,36 @@ padding: 5px;
     padding: 0; 
 }
 .business_banner p{
-    font-size: 8px;
-    width: 50%;
+    font-size: 12px;
+    width: 70%;
 }
+.section_infocard{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.ecardInfos{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.ecardInfos p{
+    font-size: 12px;
+    color: blue;
+}
+.section_infocard img{
+    width:50px; 
+    height: 50px;
+}
+
 .business_banner button{
     display: flex; 
     justify-content: center;
     align-items: center;
     align-items: center;
-    background-color: white;
-    width: 40%;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     height: 30px;
     border: none; 
     border-radius: 16px;
@@ -144,10 +168,14 @@ padding: 5px;
     font-weight: bold;
 }
 
-
+.start_business{
+    color: rgb(205, 203, 203);
+    font-weight: light;
+}
 .description{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align:justify;
+    margin-top: 12px;
 }
 
 .business_banner{
@@ -156,7 +184,83 @@ padding: 5px;
     flex-direction: column;
     height: 150px;
 }
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
+.carousel-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    min-width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-btn {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: rgba(0,0,0,0.8);
+}
     @media (min-width: 900px){
     .business_infos{
         display: flex;

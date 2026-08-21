@@ -6,23 +6,29 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     font-family: verdana, sans-serif;
+    margin:0;
+    padding:0;
 }
 .caption{
     display: inline-block;
     width: auto;
     padding: 2px 9px;
     font-family: verdana;
-    font-size: 8px;
+    font-size: 12px;
     border-radius: 10px;
     background-color:#d3e4f7;
     color: rgb(141, 141, 245);
 }
+.more_button{
+    text-decoration: none;
+}
 .logo_aethel {
-    width: 80px;
+    width: 100px;
+    filter:invert(1);
 }
 
 .phone_aethel {
-    width: 140px;
+    width: 100%;
     transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -32,6 +38,7 @@ body{
 
 .top_home{
     height: auto;
+    
 
 }
 nav {
@@ -55,26 +62,100 @@ nav {
     color: black; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: auto; 
-    font-size: 20px;
+    font-size: 29px;
     margin-top: 0;
 }
 
 .welcome_band{
+    align-items: center;
     display: flex;
+    height: 80vh;
     font-size: 10px;
     justify-content: center;
     padding: 10px;
     background-color: rgb(255, 255, 255);
 }
+@media (max-width: 900px){
+    body{
+        padding:0;
+        background-color: rgba(9, 9, 249, 0.232)
+
+    }
+    nav{
+        background-color: rgb(0, 0, 1); 
+    }
+    .caption {
+        background-color:#4286d344;
+    color: rgba(200, 253, 245, 0.487);
+    }
+    .welcome_band{
+        
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content:start;
+        padding: 0px;
+        margin: 0px;
+        color: white; 
+        background-color: rgba(36, 36, 37, 0.833);
+
+        
+
+        
+    }
+    .phone_aethel{
+        height: 100vh;
+        z-index: -1;
+        filter: blur(.4px);
+
+
+    width: 100%;
+    height: 100vh;
+
+    object-fit: cover;
+    object-position: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    }
+    
+    .welcome_text {
+        
+        display: flex;
+        justify-content:start;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: white; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 70vh; 
+        font-size: 40px;
+        margin-top: 0;
+    }
+    .options{
+        margin: 0px;
+    }
+    .band_left{
+        width:90%; 
+        text-align: left;
+        align-self: flex-start;
+        font-size: 12px;
+        padding: 14px;
+
+    }
+   
+    
+}
 .band_left{
-    width:60%; 
+    width:auto; 
     text-align: left;
+    font-size: 14px;
 }
 .band_right{
     width: 40%;
-    background: radial-gradient(circle, blue, white,white,white);
     /* background-color: red; */
     display: flex;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
 }
@@ -91,11 +172,11 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #061a9a;
+    background-color: orange;
     min-width: 100px;
     height: 40px;
     border-radius: 5px;
-    color: white; 
+    color: black; 
     display: flex;
     padding: 7px;
     text-align: center;
@@ -123,20 +204,19 @@ nav {
     color: #ccc;
 }
 .orangina { 
-    color: #061a9a; 
+    color: orange; 
     display: inline-block;
 }
 .login-btn, .signin-btn {
     width: auto;
     padding: 7px;
     margin: 10px;
-    color: white;
-    background-color: #061a9a;
+    color: black;
+    background-color: orange;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    font-weight: bold;
     font-size: 8px;
     text-align: center;
 
@@ -147,7 +227,7 @@ nav {
 button{
     background: none; 
     border: none;
-    color: white; 
+    color: black; 
     font-weight: bold;
 }
 .options {
@@ -162,7 +242,7 @@ button{
     background-color: white;
     color: black;
 
-    margin: 5px 0;
+    
     padding: 9px 12px;
 
     box-sizing: border-box;
@@ -197,7 +277,8 @@ button{
 
 .sol p{
     color: black; 
-    font-size: 9px;
+    text-align: start;
+    font-size: 13px;
 }
 .fonctions {
     display: flex; 
@@ -261,7 +342,6 @@ footer{
     align-items: center;
     background-color: #f0f7ff;
     color: black; 
-    position: fixed; 
     bottom: 0; 
     width: 100%; 
     margin: 0; 
