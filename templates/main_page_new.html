@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Aethel Dynamics — Business Feed</title>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="feed-header">
+            <div class="topbar">
+                <div class="brand-group">
+                    <div class="brand-mark">A</div>
+                    <span class="brand-name">powered by Aethel</span>
+                </div>
+
+                <label class="search-box" aria-label="Search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.95 12.05l4.2 4.2a1 1 0 01-1.42 1.42l-4.2-4.2A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+                    <input type="search" placeholder="Search businesses, founders, or partners...">
+                </label>
+
+                <div class="topbar-actions">
+                    <button class="new-btn">+ New</button>
+                    <img class="mini-avatar" src="{{ url_for('static', filename='images/manu.jpeg') }}" alt="Profile picture">
+                </div>
+            </div>
+
+            <nav class="feed-nav">
+                <button class="nav-item active">Home</button>
+                <button class="nav-item">Marketplace</button>
+                <button class="nav-item">Business</button>
+                <button class="nav-item">Discover</button>
+                <button class="nav-item">Inbox</button>
+            </nav>
+        </header>
+
+        <main class="feed-layout">
+            <aside class="left-rail">
+                <div class="profile-card card">
+                    <div class="profile-top">
+                        <img src="{{ url_for('static', filename='images/manu.jpeg') }}" alt="User avatar">
+                        <div>
+                            <h4>Emmanuel P.</h4>
+                            <span>Founder · Cyprus</span>
+                        </div>
+                    </div>
+                    <div class="profile-stats">
+                        <div>
+                            <strong>2.4k</strong>
+                            <span>Followers</span>
+                        </div>
+                        <div>
+                            <strong>388</strong>
+                            <span>Deals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card side-panel">
+                    <h4>Trending sectors</h4>
+                    <ul>
+                        <li>Logistics</li>
+                        <li>Fashion</li>
+                        <li>AI Services</li>
+                        <li>Hospitality</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="feed-column">
+                <div class="stories card">
+                    <div class="story story-one"><span>Retail</span></div>
+                    <div class="story story-two"><span>Startup</span></div>
+                    <div class="story story-three"><span>Finance</span></div>
+                    <div class="story story-four"><span>Food</span></div>
+                </div>
+
+                <div class="composer card">
+                    <div class="composer-head">
+                        <img src="{{ url_for('static', filename='images/manu.jpeg') }}" alt="User avatar">
+                        <input type="text" placeholder="Share a business update...">
+                    </div>
+                    <div class="composer-actions">
+                        <button>Photo</button>
+                        <button>Video</button>
+                        <button>Article</button>
+                        <button class="primary">Publish</button>
+                    </div>
+                </div>
+
+                <article class="post card">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="{{ url_for('static', filename='images/enterprise-1.jpg') }}" alt="Company logo">
+                            <div>
+                                <h4>Luna & Co</h4>
+                                <span>Fashion Studio · 2h ago</span>
+                            </div>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+
+                    <p class="post-text">We just launched our spring collection and our team is now opening new wholesale collaborations across Europe. Building a business is easier when the right network is in place.</p>
+
+                    <div class="post-image image-one"></div>
+
+                    <div class="post-metrics">
+                        <span>❤ 1.8k</span>
+                        <span>💬 236</span>
+                        <span>↗ 48 shares</span>
+                    </div>
+
+                    <div class="post-actions">
+                        <button>Like</button>
+                        <button>Comment</button>
+                        <button>Share</button>
+                    </div>
+                </article>
+
+                <article class="post card">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="{{ url_for('static', filename='images/svgs/svg_ring.svg') }}" alt="Company logo">
+                            <div>
+                                <h4>NorthPeak Logistics</h4>
+                                <span>Operations · 5h ago</span>
+                            </div>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+
+                    <p class="post-text">We moved from scattered tools to a single process for clients, finance, and delivery. Growth is more consistent when every team sees the same dashboard.</p>
+
+                    <div class="analytics-panel">
+                        <div>
+                            <strong>+36%</strong>
+                            <span>Delivery efficiency</span>
+                        </div>
+                        <div>
+                            <strong>4.8/5</strong>
+                            <span>Client rating</span>
+                        </div>
+                        <div>
+                            <strong>12</strong>
+                            <span>New partners</span>
+                        </div>
+                    </div>
+
+                    <div class="post-actions">
+                        <button>Like</button>
+                        <button>Comment</button>
+                        <button>Share</button>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="right-rail">
+                <div class="card insight-card">
+                    <h4>Business pulse</h4>
+                    <div class="metric-row">
+                        <span>Qualified leads</span>
+                        <strong>842</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>Monthly revenue</span>
+                        <strong>$96k</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>Conversion rate</span>
+                        <strong>18.4%</strong>
+                    </div>
+                </div>
+
+                <div class="card trending-card">
+                    <h4>Hot this week</h4>
+                    <ul>
+                        <li>Retail growth strategies</li>
+                        <li>Startup funding loops</li>
+                        <li>Global supplier sourcing</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <section class="testimonials">
+            <div class="section-title-row">
+                <h3>What founders and companies say</h3>
+                <a href="#">View all</a>
+            </div>
+
+            <div class="testimonial-grid">
+                <article class="testimonial-card card">
+                    <div class="company-row">
+                        <div class="company-badge blue">L</div>
+                        <div>
+                            <strong>Luna & Co</strong>
+                            <span>Retail brand</span>
+                        </div>
+                    </div>
+                    <p>“Flow helped us organize our customer journey, inventory, and partnerships in one place. We finally stopped juggling tools.”</p>
+                    <div class="person-row">
+                        <img src="{{ url_for('static', filename='images/manu.jpeg') }}" alt="Amara Okafor">
+                        <span>Amara Okafor</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card card">
+                    <div class="company-row">
+                        <div class="company-badge green">N</div>
+                        <div>
+                            <strong>NorthPeak</strong>
+                            <span>Logistics</span>
+                        </div>
+                    </div>
+                    <p>“The dashboard gave our operations team clarity. Orders, delivery milestones, and documents all live in one place.”</p>
+                    <div class="person-row">
+                        <img src="{{ url_for('static', filename='images/manu.jpeg') }}" alt="Daniel Smith">
+                        <span>Daniel Smith</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card card">
+                    <div class="company-row">
+                        <div class="company-badge orange">B</div>
+                        <div>
+                            <strong>BrightLane</strong>
+                            <span>Hospitality</span>
+                        </div>
+                    </div>
+                    <p>“We now present a more professional brand online and manage client inquiries without losing momentum. It feels built for growth.”</p>
+                    <div class="person-row">
+                        <img src="{{ url_for('static', filename='images/manu.jpeg') }}" alt="Nia Joseph">
+                        <span>Nia Joseph</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aethel Dynamics. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
