@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const revealItems = document.querySelectorAll(
-    '.section-heading, .options, .options .sol, .product-highlight, .fonctions, .fonctions .sol, .flow_flow, .flow_flow .sol, .ready_manage, .site-footer, .ecosystem-section, .ecosystem-intro, .ecosystem-core, .ecosystem-node, .flow-showcase-section, .flow-showcase-copy, .flow-showcase-visual'
+    '.section-heading, .options, .options .sol, .product-highlight, .fonctions, .fonctions .sol, .flow_flow, .flow_flow .sol, .ready_manage, .site-footer, .ecosystem-section, .ecosystem-intro, .ecosystem-core, .ecosystem-node, .flow-showcase-section, .flow-showcase-copy, .flow-showcase-visual, .testimonials-section, .testimonials-heading, .testimonial-card'
   );
   if (!revealItems.length) return;
 

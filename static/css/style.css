@@ -259,6 +259,66 @@ img {
     padding: 14px;
 }
 
+.story-of-the-day {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 18px;
+    padding: 18px;
+    align-items: center;
+}
+
+.story-of-the-day-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.story-of-the-day-copy h3 {
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+    line-height: 1.2;
+    color: var(--text);
+}
+
+.story-of-the-day-copy p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.story-cta {
+    width: fit-content;
+    border: 0;
+    background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.story-of-the-day-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.story-spotlight {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(29,78,216,0.25), rgba(124,58,237,0.25)), url("../images/enterprise-1.jpg") center/cover no-repeat;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+}
+
 .story {
     min-height: 130px;
     border-radius: 18px;
