@@ -7,27 +7,37 @@
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 
-    <title>Aethel Dynamics</title>
-</head>
-
+        <title>Aethel Dynamics</title>
+    </head>
 <!-- je vais commencer par faire le design de la page principale -->
 
-<body>
+<body id="top">
 
-    <nav>
-        <img
-            class="logo_aethel"
-            width="70"
-            src="{{ url_for('static', filename='logos/aethel_logo_nobg.png') }}"
-            alt="Background Image"
-        >
+    <nav class="site-nav">
+        <a href="#top" aria-label="Back to top">
+            <img
+                class="logo_aethel"
+                width="70"
+                src="{{ url_for('static', filename='logos/aethel_small_logos.png') }}"
+                alt="Aethel Technologies"
+            >
+        </a>
 
-        <div class="logins_buttons">
-            
+        <div class="nav-actions">
+            <details class="menu-dropdown">
+                <summary class="menu-button" aria-label="Open navigation menu">
+                    <span>Menu</span>
+                    <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+                </summary>
+                <div class="menu-panel">
+                    <a href="#more">Why Aethel ? </a>
+                    <a href="#flow">Our products</a>
+                    <a href="#process">Watch tutorials</a>
+                    <a href="{{ url_for('signin_page') }}">Create an account</a>
+                </div>
+            </details>
 
-            <a class="login-btn" href="{{ url_for('login_page') }}">
-                <button>Login</button>
-            </a>
+            <a class="login-btn" href="{{ url_for('login_page') }}">Login</a>
         </div>
     </nav>
 
@@ -36,64 +46,35 @@
 
         <div class="welcome_text">
 
-            <div class="welcome_band">
-
-                 <video class="busivid"  width="100%" height="200px" src="{{url_for('static', filename='/images/backgrounds/businessvideo.mp4')}}"  muted autoplay "></video>
-
-
-
-                <div class="band_left">
+              <div class="welcome_band">
+                <div class="band_left" style="width: 80%">
 
                     <p class="caption">
-                        Built for small businesses                 </p>
+                        One Hub. Endless Possibilities.
+                    </p>
 
-                    <h1>
-                        Turn your idea into a business with
-                        <span class="orangina">Flow</span>
+                    <h1 id="hero-title">
+                        Manage your business with
+                        <span class="orangina"> Aethel</span>
                     </h1>
 
                     <p>
-                        Start building your business with everything you need in one place.
-Create a professional identity that represents who you are.
-Connect with customers, manage orders and keep your finances organized.
-Build your reputation through experience, reviews and achievements.
-
+                        Aethel brings the essential parts of your business together in one connected ecosystem, providing the tools and solutions you need to manage your business, streamline operations, and pursue sustainable growth.
                     </p>
 
                     <div class="sec_buttons">
 
                         <div class="button1">
                             <button>
-                                Get started.
-                                <svg
-                                    width="20px"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g
-                                        id="SVGRepo_tracerCarrier"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M4 12H6.5M20 12L14 6M20 12L14 18M20 12H9.5"
-                                            stroke="#1C274C"
-                                            stroke-width="1.5"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        ></path>
-                                    </g>
-                                </svg>
+                                Get started
+                               
                             </button>
                         </div>
 
 
                         <div class="button2">
                             <a class="more_button" href="#more"><button>
-                                Explore Flow
+                                Explore Aethel
 
                                 <svg
                                     width="20px"
@@ -123,6 +104,29 @@ Build your reputation through experience, reviews and achievements.
                     </div>
 
                 </div>
+                <div class="hero-bubbles" aria-label="Aethel platform updates">
+                    <div class="hero-bubble bubble-top">
+                        <div>
+                            <span class="bubble-label">New message from Nathan</span>
+                            <strong>I really appreciate the work you've done.</strong>
+                            <small>Just now · Aethel platform</small>
+                        </div>
+                    </div>
+                    <div class="hero-bubble bubble-left">
+                        <span class="bubble-avatar">A</span>
+                        <div>
+                            <strong>Amara Okafor</strong>
+                            <small>Let’s plan the next launch.</small>
+                        </div>
+                    </div>
+                    <div class="hero-bubble bubble-right">
+                        <span class="bubble-status"></span>
+                        <div>
+                            <strong>Flow update</strong>
+                            <small>A new version is available !</small>
+                        </div>
+                    </div>
+                </div>
 
 
                 
@@ -133,49 +137,161 @@ Build your reputation through experience, reviews and achievements.
 
     </div>
 
+    <main class="homepage-content">
+        <section class="content-section ecosystem-section" id="more">
+            <div class="ecosystem-intro">
+                <h2> Everything your business needs.</h2>
+                <p class="ecosystem-lead">Aethel brings businesses, products, services, and opportunities together in one connected platform.</p>
+                <p class="ecosystem-statement">One ecosystem. Built to grow with you.</p>
+            </div>
 
-<h2>Why did we create Flow ?</h2>
-    <div class="options">
+            <div class="ecosystem-map" aria-label="Aethel connects customers, sales, operations, finance, growth, and technology">
+                <div class="ecosystem-links" aria-hidden="true">
+                    <span class="ecosystem-link link-customers"></span>
+                    <span class="ecosystem-link link-sales"></span>
+                    <span class="ecosystem-link link-operations"></span>
+                    <span class="ecosystem-link link-finance"></span>
+                    <span class="ecosystem-link link-growth"></span>
+                    <span class="ecosystem-link link-technology"></span>
+                </div>
+
+                <div class="ecosystem-core">
+                    <span class="ecosystem-core-ring"></span>
+                    <img class="ecosystem-core-logo" src="{{ url_for('static', filename='logos/aethel_small_logos.png') }}" alt="Aethel">
+                   
+                </div>
+
+                <div class="ecosystem-node node-customers">
+                    <span class="ecosystem-node-index">01</span>
+                    <strong>Customers</strong>
+                    <small>Relationships that last</small>
+                </div>
+                <div class="ecosystem-node node-sales">
+                    <span class="ecosystem-node-index">02</span>
+                    <strong>Sales</strong>
+                    <small>Momentum with clarity</small>
+                </div>
+                <div class="ecosystem-node node-operations">
+                    <span class="ecosystem-node-index">03</span>
+                    <strong>Operations</strong>
+                    <small>Work in motion</small>
+                </div>
+                <div class="ecosystem-node node-finance">
+                    <span class="ecosystem-node-index">04</span>
+                    <strong>Finance</strong>
+                    <small>Decisions grounded</small>
+                </div>
+                <div class="ecosystem-node node-growth">
+                    <span class="ecosystem-node-index">05</span>
+                    <strong>Growth</strong>
+                    <small>Built for what is next</small>
+                </div>
+                <div class="ecosystem-node node-technology">
+                    <span class="ecosystem-node-index">06</span>
+                    <strong>Technology</strong>
+                    <small>One reliable foundation</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section flow-showcase-section" id="flow">
+            <div class="flow-showcase">
+                <div class="flow-showcase-copy">
+                    <p class="caption">A PRODUCT BY AETHEL</p>
+                    <h2>Flow keeps your business moving.</h2>
+                    <p class="flow-showcase-lead">Flow is Aethel's business management product for bringing customers, sales, operations, finance, and daily work into one clear workspace.</p>
+                    <div class="flow-showcase-points">
+                        <span>Customer relationships</span>
+                        <span>Daily operations</span>
+                        <span>Business performance</span>
+                    </div>
+                    <a class="flow-showcase-link" href="{{ url_for('main_page') }}">Explore Flow <span aria-hidden="true">&rarr;</span></a>
+                </div>
+
+                <div class="flow-showcase-visual" aria-label="Flow product overview">
+                    <div class="flow-illustration" aria-hidden="true">
+                        <span class="flow-ribbon ribbon-blue"></span>
+                        <span class="flow-ribbon ribbon-indigo"></span>
+                        <span class="flow-ribbon ribbon-gold"></span>
+                    </div>
+                    <div class="flow-showcase-orbit orbit-large"></div>
+                    <div class="flow-showcase-orbit orbit-small"></div>
+                    <div class="flow-phone" role="img" aria-label="Flow mobile workspace showing business modules">
+                        <div class="flow-phone-screen">
+                            <div class="flow-phone-topbar">
+                                <span class="flow-phone-dot"></span>
+                                <strong>Flow</strong>
+                                <span class="flow-phone-menu">...</span>
+                            </div>
+                            <div class="flow-phone-greeting">Good morning, Emmanuel</div>
+                            <div class="flow-phone-summary">
+                                <small>Business overview</small>
+                                <strong>$24,780</strong>
+                                <span>+12.5% this month</span>
+                            </div>
+                            <div class="flow-phone-panels">
+                                <div class="flow-phone-panel panel-customer"><span>Customers</span><strong>248</strong><small>Active relationships</small></div>
+                                <div class="flow-phone-panel panel-sales"><span>Sales</span><strong>84%</strong><small>Pipeline health</small></div>
+                                <div class="flow-phone-panel panel-operations"><span>Operations</span><strong>32</strong><small>Tasks in motion</small></div>
+                                <div class="flow-phone-panel panel-finance"><span>Finance</span><strong>$8.4k</strong><small>Available balance</small></div>
+                            </div>
+                            <div class="flow-phone-nav"><span class="is-active">Overview</span><span>Work</span><span>Insights</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section story-section" id="story">
+            <div class="section-heading">
+                <h2 style="text-align: center;">Why we created Aethel</h2>
+            </div>
+            <div class="options" id="features">
 
         <div class="sol red">
             <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#110660"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M512 64C264.96 64 64 264.96 64 512s200.96 448 448 448 448-200.96 448-448-200.96-448-448-448z m0 831.744A384.128 384.128 0 0 1 128.256 512 384.128 384.128 0 0 1 512 128.256 384.128 384.128 0 0 1 895.744 512 384.192 384.192 0 0 1 512 895.744zM512 254.08a140.16 140.16 0 0 0-140.672 139.392 32.128 32.128 0 0 0 64.32 0c0-42.112 33.536-75.136 76.352-75.136 42.112 0 76.352 34.56 76.352 76.992 0 16-22.912 38.976-43.2 59.2-30.592 30.592-65.28 65.28-65.28 111.744v45.888a32.128 32.128 0 1 0 64.256 0v-45.888c0-19.84 23.68-43.52 46.464-66.304 29.056-29.056 62.08-62.016 62.08-104.64A141.12 141.12 0 0 0 512 254.08z m-48.192 500.928a48.192 48.192 0 1 0 96.384 0 48.192 48.192 0 0 0-96.384 0z" fill="#000000"></path></g></svg>
-            <h5 id="more">The problem</h5>
-            <p>Your business is everywhere.
-
-                Your customers are on one platform.
-                Your finances are somewhere else.
-                Your orders, documents and business information are scattered across different apps.
-                
-                Small businesses shouldn't need a dozen tools to stay organized.</p>
+            <h5>The challenge</h5>
+            <p>Businesses often rely on disconnected tools to manage different parts of their operations. Information gets scattered, workflows become harder to manage, and opportunities are easily missed. Aethel was created to bring businesses, tools, and opportunities together through one connected platform.
+            Data is scattered, decisions are slower, and the experience feels fragmented. Aethel was created to bring that complexity into one clear system.</p>
         </div>
         <div class="sol blue">
             <svg fill="#000000" viewBox="-4 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M10.328 6.83a5.903 5.903 0 0 1-1.439 3.64 2.874 2.874 0 0 0-.584 1v1.037a.95.95 0 0 1-.95.95h-3.71a.95.95 0 0 1-.95-.95V11.47a2.876 2.876 0 0 0-.584-1A5.903 5.903 0 0 1 .67 6.83a4.83 4.83 0 0 1 9.28-1.878 4.796 4.796 0 0 1 .38 1.88zm-.95 0a3.878 3.878 0 0 0-7.756 0c0 2.363 2.023 3.409 2.023 4.64v1.037h3.71V11.47c0-1.231 2.023-2.277 2.023-4.64zM7.83 14.572a.475.475 0 0 1-.475.476h-3.71a.475.475 0 0 1 0-.95h3.71a.475.475 0 0 1 .475.474zm-.64 1.262a.238.238 0 0 1-.078.265 2.669 2.669 0 0 1-3.274 0 .237.237 0 0 1 .145-.425h2.983a.238.238 0 0 1 .225.16z"></path></g></svg>
             <h5>The solution</h5>
-            <p>Bring everything into one system.
+            <p>
+            Aethel provides a connected platform where businesses can access the tools, products, services, and connections they need to operate and grow. Products such as Flow are built within the Aethel ecosystem to solve specific business needs — while working together as part of a larger platform.
 
-                Flow brings your business profile, customers, orders, finances, documents and insights together in one simple platform.
-                
-                One account. One place. One flow.</p>
-
+One platform. Multiple solutions. One connected ecosystem.</p>
 
         </div>
         <div class="sol green">
             <svg fill="#000000" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="a"></g> <g id="b"> <path d="M53.2676,21.2861c-1.0825-.6357-2.3833-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v26.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5V24.3076c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,32.2139c0,.2759-.2241,.5-.5,.5h-9c-.2759,0-.5-.2241-.5-.5V27.355c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v29.1924Zm-17.7324-22.2139c-1.083-.6357-2.3828-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v16.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5v-19.1924c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,22.2139c0,.2759-.2241,.5-.5,.5h-9c-.2759,0-.5-.2241-.5-.5v-16.145c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v19.1924Zm-17.7324-13.2139c-1.0835-.6357-2.3833-.6509-3.4761-.0396-2.353,1.3145-4.3789,2.7593-6.021,4.2944-.4897,.457-.7705,1.1182-.7705,1.814v7.145c0,.8271,.6729,1.5,1.5,1.5h9c.8271,0,1.5-.6729,1.5-1.5v-10.1924c0-1.2554-.6475-2.3848-1.7324-3.0215Zm.7324,13.2139c0,.2759-.2241,.5-.5,.5H10.5c-.2759,0-.5-.2241-.5-.5v-7.145c0-.4194,.165-.8145,.4531-1.0835,1.5835-1.48,3.5435-2.877,5.8257-4.1519,.3818-.2129,.7988-.3193,1.2153-.3193,.436,0,.8721,.1162,1.2676,.3481,.7754,.4556,1.2383,1.2627,1.2383,2.1592v10.1924ZM43.6836,20.1655c.3647-3.4077,.4043-6.7339,.1177-9.8862-.0664-.7373-.6958-1.2827-1.4419-1.272-3.7036,.1211-7.1143,.7529-10.1372,1.8789-.5161,.1924-.8765,.6313-.9644,1.1743-.0869,.54,.1152,1.0674,.542,1.4097l1.6562,1.3315c-.9927,1.4741-5.3232,7.1528-14.8311,10.1787-1.1265,.3579-2.333,.6167-3.4995,.8667-3.2983,.7065-6.4131,1.3745-6.0996,4.1621,.0684,.6157,.4351,1.4844,1.7964,2.125,1.188,.5591,2.9023,.8423,4.8721,.8423,4.1152,0,9.3442-1.2358,13.21-3.7739,6.1064-4.0073,9.9341-7.9927,11.0273-9.1943l1.4014,1.1226c.4146,.3335,.9805,.4111,1.4722,.2065,.4937-.2056,.8223-.6436,.8784-1.1719Zm-.9941-.1064c-.0244,.23-.1958,.3252-.2686,.3555-.1582,.0654-.3306,.042-.4629-.064l-1.772-1.4199c-.2114-.1699-.5195-.1392-.6943,.0674-.0391,.0464-3.9951,4.6826-11.1362,9.3687-5.3623,3.5215-13.7422,4.4468-17.1074,2.8628-.7568-.356-1.1699-.8037-1.228-1.3315-.2026-1.7969,1.8877-2.3384,5.3149-3.0732,1.1899-.2549,2.4204-.5186,3.5933-.8911,11.3286-3.6055,15.4551-10.6943,15.6255-10.9946,.1206-.2134,.0693-.4829-.1221-.6362l-2.0059-1.6118c-.2051-.165-.1943-.3843-.1807-.4707,.0142-.0884,.0747-.3032,.3257-.3965,2.9219-1.0884,6.2261-1.6997,9.8208-1.8174h.0122c.2046,0,.3833,.1602,.4014,.3628v.0005c.2808,3.0869,.2422,6.3472-.1157,9.6895Z"></path> </g> </g></svg>
 
             <h5>The result</h5>
-            <p>More time to build what matters.
-
-                Stay organized, look professional, build customer trust and track your progress as your business grows.
-                
-                You focus on your business. Flow handles the background task.</p>
+            <p>Businesses get a simpler way to operate, connect, and grow. Instead of managing everything across disconnected systems, they can build their operations within an ecosystem designed to grow with them.</p>
 
 
         </div>
 
-    </div>
-    <h3 style="background-color: white; margin:0; padding: 5px 0px;">Everything that you need in one place</h3>
+            </div>
+        </section>
 
-    <div class="fonctions">
+        <!-- Removed duplicate product and platform sections.
+        <section class="content-section product-section" id="products">
+        <p class="caption">Aethel products</p>
+        <h2>Tools for every stage of growth</h2>
+        <div class="sol">
+            <h5>Flow</h5>
+            <p>Flow is Aethel's business operations product. It brings customer relationships, daily activity, and performance into one focused workspace.</p>
+            <a class="more_button" href="{{ url_for('main_page') }}"><button type="button">Explore Flow</button></a>
+        </div>
+        </section>
+
+        <section class="content-section capabilities-section" id="capabilities">
+            <div class="section-heading">
+                <p class="caption">One connected platform</p>
+                <h2>Everything you need in one place</h2>
+            </div>
+            <div class="fonctions">
         <div class="sol">
             <svg fill="#000000" version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 255 256" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M154.3,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7s-7.5-16.7-16.7-16.7S154.3,164.6,154.3,173.8z M144.4,193.6 h-18.8h-18.8c-11.4,0-18.6,9.4-18.6,21.3V256h12.8v-37.7c0-1.2,1-2,2-2c1.2,0,2,0.8,2,2v37.6h41.2v-37.6c0-1.2,1-2,2-2 c1.2,0,2,1,2,2v37.6h12.8V215C163.3,203.1,156,193.6,144.4,193.6z M198.2,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7 s-7.5-16.7-16.7-16.7S198.2,164.6,198.2,173.8z M196.5,193.6c-11.4,0-18.6,9.4-18.6,21.3V256h12.8v-37.7c0-1.2,1-2,2-2 c1.2,0,2,0.8,2,2v37.6h41.2v-37.6c0-1.2,1-2,2-2c1.2,0,2,1,2,2v37.6h12.8V215c0.2-12-7.1-21.5-18.6-21.5h-18.8L196.5,193.6 L196.5,193.6L196.5,193.6z M23.1,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7s-7.5-16.7-16.7-16.7S23.1,164.6,23.1,173.8z M15,255.9v-37.6c0-1.2,1-2,2-2c1.2,0,2,0.8,2,2v37.6h41.2v-37.6c0-1.2,1-2,2-2c1.2,0,2,1,2,2v37.6H77V215 c0.2-12-7.1-21.5-18.6-21.5H39.6H20.8c-11.4,0-18.6,9.4-18.6,21.3v41.1L15,255.9L15,255.9z M108.9,173.8c0,9.2,7.5,16.7,16.7,16.7 s16.7-7.5,16.7-16.7s-7.5-16.7-16.7-16.7S108.9,164.6,108.9,173.8z M67.2,173.8c0,9.2,7.5,16.7,16.7,16.7s16.7-7.5,16.7-16.7 s-7.5-16.7-16.7-16.7S67.2,164.6,67.2,173.8z M167.6,44.2l-3.8,3.8c2.9,5.9,4.5,12.5,4.5,19.5c-0.1,23.1-18.5,42.4-41.5,43.6 c-25.9,1.3-47.3-20.1-46-46C82,42,101.3,23.6,124.4,23.5c7,0,13.6,1.6,19.5,4.5l3.8-3.8v-4.5v-1.4c-7.9-3.7-16.8-5.6-26.2-5.1 c-27.8,1.6-50.1,24.5-51,52.3c-1,31.3,24.7,57,55.9,55.9c27.8-0.9,50.7-23.2,52.3-51c0.5-9.4-1.3-18.3-5.1-26.2h-1.4 C172.2,44.2,167.6,44.2,167.6,44.2z M146.6,65.3l8.6-8.6c1.6,4.7,2.3,9.9,1.5,15.3c-2.1,14.7-14.1,26.3-28.9,27.8 c-20.5,2-37.7-15.2-35.6-35.7c1.5-14.8,13.1-26.8,27.8-28.9c5.4-0.7,10.6-0.1,15.3,1.5l-8.6,8.6c-0.7-0.1-1.4-0.1-2.1-0.1 c-13,0-23.5,11.3-22,24.7c1.1,10.2,9.3,18.3,19.5,19.5c13.3,1.5,24.7-9,24.7-22C146.7,66.6,146.7,66,146.6,65.3z M163.7,34.8 l-28.9,28.9c0.5,1.4,0.7,3,0.5,4.7c-0.5,5.1-4.7,9.2-9.8,9.7c-6.7,0.6-12.3-5-11.8-11.8c0.4-5.1,4.6-9.3,9.7-9.8 c1.7-0.2,3.2,0,4.7,0.5l28.9-28.9v-8.4l18.8-18.8V16H191l-18.8,18.8L163.7,34.8z"></path> </g></svg>
 
@@ -210,15 +326,21 @@ Build your reputation through experience, reviews and achievements.
 
         </div>
 
-    </div>
+            </div>
+        </section>
+        -->
 
-    
-    <h3>how does Flow work ?</h3>
-    <div class="flow_flow">
+        <section class="content-section process-section" id="process">
+            <div class="section-heading">
+                <p class="caption">A clearer way forward</p>
+                <h2>New to aethel?</h2>
+                <p>Get started with Aethel and discover how our platform can improve  your business processes.</p>
+            </div>
+            <div class="flow_flow">
         <div class="sol">
             <span>1</span>
-            <h5>Creating an account</h5>
-            <p>Create your account with your email and set up your personal profile. Choose how you want to use Flow as a Business or a Customer.</p>
+            <h5>Join Aethel</h5>
+            <p>Create your account and set up your business profile. Explore the parts of the Aethel ecosystem that fit your needs.</p>
         </div>
         <svg
                                     width="20px"
@@ -244,11 +366,8 @@ Build your reputation through experience, reviews and achievements.
                                 </svg>
         <div class="sol">
             <span>2</span>
-            <h5>Build your flow</h5>
-            <p>Set up your experience.
-
-                If you're a business, create your professional profile, add your services or products, portfolio and business information.
-                If you're a customer, explore businesses and build your personal favorites.</p>
+            <h5>Choose within our products</h5>
+            <p>Access the products, tools, services, and connections that fit your business needs. Flow is one of the products available within Aethel.</p>
 
 
         </div>
@@ -277,25 +396,25 @@ Build your reputation through experience, reviews and achievements.
         <div class="sol">
             <span>3</span>
 
-            <h5>Connect</h5>
-            <p>Start using Flow.
-
-                Businesses can receive orders, manage customers, track finances and monitor their performance. Customers can discover businesses, place orders, communicate and leave reviews.</p>
+            <h5>Grow with confidence</h5>
+            <p>Expand your capabilities, connect with new opportunities, and access what your business needs as it evolves.</p>
 
 
         </div>
-    </div>
+            </div>
+        </section>
 
-    <div class="ready_manage">
-        <h4>Ready to manage your business ? </h4>
-        <p>Join Flow community and take control of your business today</p>
+        <section class="ready_manage" id="get-started">
+        <h4>Step into the Aethel ecosystem</h4>
+        <p>Join the Aethel community and manage your business with confidence.</p>
         <button>Get started for free</button>
-    </div>
+        </section>
+    </main>
+
     <footer class="site-footer">
         <div class="footer-top">
             <div class="footer-brand-wrap">
-                <img width="70px" src="{{url_for('static',filename= 'logos/aethel_logo_nobg.png')}}">
-                <p>FROM IDEAS TO GROWTH</p>
+                 <img width="70px" src="{{url_for('static',filename= 'logos/aethel_small_logos.png')}}" alt="Aethel Technologies">
             </div>
 
             <div class="footer-grid">
@@ -303,7 +422,7 @@ Build your reputation through experience, reviews and achievements.
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">The Story of flow</a></li>
+                        <li><a href="#">Our Story</a></li>
                         <li><a href="#">Work with us</a></li>
                         <li><a href="#">Support</a></li>
                     </ul>
@@ -319,14 +438,14 @@ Build your reputation through experience, reviews and achievements.
 
                 <div class="footer-column">
                     <h4>Connect With Us</h4>
-                    <p class="footer-contact">Email: <a href="mailto:hello@flow.com">emmanuellukungu6@gmail.com</a></p>
+                    <p class="footer-contact">Email: <a href="mailto:hello@aethel.com">emmanuellukungu6@gmail.com</a></p>
                     <p class="footer-contact">Phone: <a href="tel:+33123456789">+905338366127</a></p>
                     
                 </div>
 
                 <div class="footer-column">
                     <h4>Newsletter Signup</h4>
-                    <p class="footer-contact">Join our community and discover ideas, stories, and updates from the Flow ecosystem.</p>
+                    <p class="footer-contact">Join our community and discover ideas, stories, and updates from the Aethel ecosystem.</p>
                     <div class="footer-newsletter">
                         <input type="email" placeholder="Enter your email" aria-label="Email address">
                         <button type="button">Submit</button>
@@ -336,9 +455,11 @@ Build your reputation through experience, reviews and achievements.
         </div>
 
         <div class="footer-bottom">
-            &copy; 2026 Flow project All rights reserved.
+            &copy; 2026 Aethel Dynamics. All rights reserved.
         </div>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 
