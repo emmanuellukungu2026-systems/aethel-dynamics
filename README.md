@@ -1,2 +1,2 @@
 # aethel-dynamics
-je vais faire un system de gestion
+je vais faire une startup qui permet aux petites entreprises de gérer leur vie quotidienne 
